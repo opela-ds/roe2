@@ -1,6 +1,7 @@
 services:
   - type: web
     name: captcha-api
-    runtime: python
-    buildCommand: ""
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    env: python
+    buildCommand: ./render-build.sh
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+
